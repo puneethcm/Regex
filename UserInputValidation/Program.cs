@@ -15,6 +15,10 @@ internal class Program
         string lastName = Console.ReadLine();
         validate.ValidatLastName(lastName);
 
+        Console.WriteLine("Enter Email Name");
+        string email = Console.ReadLine();
+        validate.ValidateEmailName(email);
+
         Console.ReadLine();
     }
 }
