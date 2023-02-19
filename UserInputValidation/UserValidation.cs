@@ -8,6 +8,7 @@ namespace UserInputValidation
 		public const string First_Name = "^[A-Z]{1}[a-zA-Z]{3,}$";
         public const string Last_Name = "^[A-Z]{1}[a-zA-Z]{3,}$";
         public const string EMAIL = @"^[^@\s]+@[^@\s]+\.(com|net|org|gov)$";
+        public const string Phone_Number = "^[0-9]{2}[ ]?[0-9]{10}$";
 
 
 
@@ -45,6 +46,13 @@ namespace UserInputValidation
         {
             Regex regex = new Regex(EMAIL);
             bool result = regex.IsMatch(email);
+
+            Console.WriteLine(result);
+        }
+        public void ValidatePhoneNumber(string phoneNumber)
+        {
+            Regex regex = new Regex(Phone_Number);
+            bool result = regex.IsMatch(phoneNumber);
 
             Console.WriteLine(result);
         }

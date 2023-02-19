@@ -19,6 +19,10 @@ internal class Program
         string email = Console.ReadLine();
         validate.ValidateEmailName(email);
 
+        Console.WriteLine("Enter Phone Number");
+        string phoneNumber = Console.ReadLine();
+        validate.ValidatePhoneNumber(phoneNumber);
+
         Console.ReadLine();
     }
 }
