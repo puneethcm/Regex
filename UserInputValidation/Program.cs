@@ -7,13 +7,13 @@ internal class Program
         Console.WriteLine("Welcome to User Input Validation");
         UserValidation validate = new UserValidation();
 
-        Console.WriteLine("Enter First Name");
-        string firstName = Console.ReadLine();
-        validate.ValidateFirstName(firstName);
+        //Console.WriteLine("Enter First Name");
+        //string firstName = Console.ReadLine();
+        //validate.ValidateFirstName(firstName);
 
-        Console.WriteLine("Enter Last Name");
-        string lastName = Console.ReadLine();
-        validate.ValidatLastName(lastName);
+        //Console.WriteLine("Enter Last Name");
+        //string lastName = Console.ReadLine();
+        //validate.ValidatLastName(lastName);
 
         Console.WriteLine("Enter Email Name");
         string email = Console.ReadLine();

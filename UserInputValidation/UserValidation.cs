@@ -7,7 +7,7 @@ namespace UserInputValidation
 	{
 		public const string First_Name = "^[A-Z]{1}[a-zA-Z]{3,}$";
         public const string Last_Name = "^[A-Z]{1}[a-zA-Z]{3,}$";
-        public const string EMAIL = @"^[^@\s]+@[^@\s]+\.(com|net|org|gov)$";
+        public const string EMAIL = "^([a-zA-Z]+)([.][a-z0-9]+)?@([bl]+)([.][co]+)([.][a-z]{2,})?$";
 
 
 
