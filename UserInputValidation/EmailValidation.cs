@@ -5,7 +5,7 @@ namespace UserInputValidation
 {
 	public class EmailValidation
 	{
-		public const string Email_Validation= "^[a-zA-Z0-9]+[.+-_]{0,1}[a-zA-Z0-9]+[@][a-zA-Z0-9]+([.][a-zA-Z]{1,})+([.][a-zA-Z]{1,}){0,1}$";
+		public const string Email_Validation= "^[a-zA-Z]+[.+-_]{0,1}[a-zA-Z0-9]+[@][a-zA-Z0-9]+([.][a-zA-Z]{1,})([.][a-zA-Z]{1,})?$";
 
         public void ValidateEmail(string email)
         {
