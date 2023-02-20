@@ -9,7 +9,7 @@ namespace UserInputValidation
         public const string Last_Name = "^[A-Z]{1}[a-zA-Z]{3,}$";
         public const string EMAIL = @"^[^@\s]+@[^@\s]+\.(com|net|org|gov)$";
         public const string Phone_Number = "^[0-9]{2}[ ]?[0-9]{10}$";
-
+        public const string Pass_Word = "^[a-zA-Z]{8,}$";
 
 
         public void ValidateFirstName(string firstName)
@@ -55,6 +55,20 @@ namespace UserInputValidation
             bool result = regex.IsMatch(phoneNumber);
 
             Console.WriteLine(result);
+        }
+        public void ValidatePassWord(string passWord)
+        {
+            Regex regex = new Regex(Pass_Word);
+            bool result = regex.IsMatch(passWord);
+
+            if (result == true)
+            {
+                Console.WriteLine("The PassWord is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Pass word should be minmum 8 characters");
+            }
         }
     }
 }
