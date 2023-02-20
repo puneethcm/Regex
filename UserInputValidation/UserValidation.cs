@@ -9,7 +9,7 @@ namespace UserInputValidation
         public const string Last_Name = "^[A-Z]{1}[a-zA-Z]{3,}$";
         public const string EMAIL = @"^[^@\s]+@[^@\s]+\.(com|net|org|gov)$";
         public const string Phone_Number = "^[0-9]{2}[ ]?[0-9]{10}$";
-        public const string Pass_Word = "^[a-zA-Z]{8,}$";
+        public const string Pass_Word = "^[A-Z]{1}[a-zA-Z]*$";
 
 
         public void ValidateFirstName(string firstName)
@@ -67,7 +67,7 @@ namespace UserInputValidation
             }
             else
             {
-                Console.WriteLine("Pass word should be minmum 8 characters");
+                Console.WriteLine("Password is invalid");
             }
         }
     }
