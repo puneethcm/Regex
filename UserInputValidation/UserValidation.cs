@@ -5,7 +5,7 @@ namespace UserInputValidation
 {
 	public class UserValidation
 	{
-		public const string First_Name = "^[A-Z]{1}[a-zA-Z]{3,}$";
+        public const string First_Name = "^[A-Z]{1}[a-zA-Z]{3,}$";
         public const string Last_Name = "^[A-Z]{1}[a-zA-Z]{3,}$";
         public const string EMAIL = @"^[^@\s]+@[^@\s]+\.(com|net|org|gov)$";
         public const string Phone_Number = "^[0-9]{2}[ ]?[0-9]{10}$";
@@ -13,9 +13,9 @@ namespace UserInputValidation
 
 
         public void ValidateFirstName(string firstName)
-		{
-			Regex regex = new Regex(First_Name);
-			bool result = regex.IsMatch(firstName);
+        {
+            Regex regex = new Regex(First_Name);
+            bool result = regex.IsMatch(firstName);
 
             if (result == true)
             {
@@ -70,6 +70,7 @@ namespace UserInputValidation
                 Console.WriteLine("Password is invalid");
             }
         }
+
     }
 }
 
