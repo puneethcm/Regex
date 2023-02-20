@@ -9,7 +9,7 @@ namespace UserInputValidation
         public const string Last_Name = "^[A-Z]{1}[a-zA-Z]{3,}$";
         public const string EMAIL = @"^[^@\s]+@[^@\s]+\.(com|net|org|gov)$";
         public const string Phone_Number = "^[0-9]{2}[ ]?[0-9]{10}$";
-        public const string Pass_Word = "^[A-Z]{1}[a-zA-Z]*[0-9]$";
+        public const string Pass_Word = "^[A-Z]{1}[a-zA-Z]*[0-9][#?!@$%^&*-]$";
 
 
         public void ValidateFirstName(string firstName)
