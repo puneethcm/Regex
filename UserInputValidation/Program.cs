@@ -7,7 +7,8 @@ internal class Program
         Console.WriteLine("\nWelcome to User Input Validation");
         UserValidation validate = new UserValidation();
         Console.WriteLine("\nChoose the options to validate");
-        Console.WriteLine("1:First Name\n2:Last Name\n3:Email\n4:Phone Number\n5:PassWord");
+        Console.WriteLine("1:First Name\n2:Last Name\n3:Email\n4:Phone Number\n5:PassWord\n6:Email Validation");
+
         int option = Convert.ToInt32(Console.ReadLine());
 
         switch (option)
@@ -36,6 +37,12 @@ internal class Program
                 Console.WriteLine("Enter Pass Word");
                 string passWord = Console.ReadLine();
                 validate.ValidatePassWord(passWord);
+                break;
+            case 6:
+                EmailValidation emailValidate = new EmailValidation();
+                Console.WriteLine("Enter User Email Id");
+                string emailVal = Console.ReadLine();
+                emailValidate.ValidateEmail(emailVal);
                 break;
 
         }
