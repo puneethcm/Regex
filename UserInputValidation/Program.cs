@@ -9,7 +9,6 @@ internal class Program
         Console.WriteLine("\nChoose the options to validate");
         Console.WriteLine("1:First Name\n2:Last Name\n3:Email\n4:Phone Number\n5:PassWord\n6:Email Validation");
 
-<<<<<<< HEAD
         int option = Convert.ToInt32(Console.ReadLine());
 
         switch (option)
@@ -45,19 +44,6 @@ internal class Program
                 string emailVal = Console.ReadLine();
                 emailValidate.ValidateEmail(emailVal);
                 break;
-=======
-        //Console.WriteLine("Enter First Name");
-        //string firstName = Console.ReadLine();
-        //validate.ValidateFirstName(firstName);
-
-        //Console.WriteLine("Enter Last Name");
-        //string lastName = Console.ReadLine();
-        //validate.ValidatLastName(lastName);
-
-        Console.WriteLine("Enter Email Name");
-        string email = Console.ReadLine();
-        validate.ValidateEmailName(email);
->>>>>>> UC3-Email
 
         }
         Console.ReadLine();

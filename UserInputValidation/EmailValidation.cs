@@ -5,21 +5,20 @@ namespace UserInputValidation
 {
 	public class EmailValidation
 	{
-		public const string Email_Validation= "^[a-zA-Z]+[.+-_]{0,1}[a-zA-Z0-9]+[@][a-zA-Z0-9]+([.][a-zA-Z]{1,})([.][a-zA-Z]{1,})?$";
+		public const string Email_Validation= @"^([a-z0-9\.\-\+]+)?@([a-z0-9]+)\.([a-z\,\.]+)$";
 
-        public void ValidateEmail(string email)
+        public string ValidateEmail(string email)
         {
             Regex regex = new Regex(Email_Validation);
             bool result = regex.IsMatch(email);
 
             if (result == true)
             {
-                Console.WriteLine("The Enter Email is Valid");
+                return "Valid";
             }
             else
             {
-                Console.WriteLine("The Enter Email is Not Valid");
-                Console.WriteLine("The First letter shoud be capital");
+                return "Invalid";
             }
         }
     }
