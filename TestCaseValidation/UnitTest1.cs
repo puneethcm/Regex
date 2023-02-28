@@ -82,18 +82,22 @@ public class UnitTest1
 
     [TestMethod]
     [TestCategory("Validate Given Emails")]
-    public void ValidateEmail()
+    [DataRow("abc@yahoo.com,", "Valid")]
+    [DataRow("abc-100@yahoo.com,", "Valid")]
+    [DataRow("abc.100@yahoo.com", "Valid")]
+    [DataRow("abc111@abc.com,", "Valid")]
+    [DataRow("abc-100@abc.net,", "Valid")]
+    [DataRow("abc.100@abc.com.au", "Valid")]
+    [DataRow("abc@1.com,", "Valid")]
+    [DataRow("abc@gmail.com.com", "Valid")]
+    [DataRow("abc+100@gmail.com", "Valid")]
+    public void ValidateEmail(string input, string expected)
     {
-        string[] input = { "abc@yahoo.com,", "abc-100@yahoo.com,", "abc.100@yahoo.com", "abc111@abc.com,", "abc-100@abc.net,",
-                            "abc.100@abc.com.au", "abc.100@abc.com.au", "abc@1.com,", "abc@gmail.com.com", "abc+100@gmail.com" };
-        string expected = "Valid";
-
+        
         EmailValidation validate = new EmailValidation();
 
-        foreach(string inputs in input)
-        {
-            string actual = validate.ValidateEmail(inputs);
-            Assert.AreEqual(expected, actual);
-        }    
+        string actual = validate.ValidateEmail(input);
+
+        Assert.AreEqual(expected, actual);    
     }
 }
